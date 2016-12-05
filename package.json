@@ -1,0 +1,17 @@
+{
+  "name": "react-global-state",
+  "version": "0.1",
+  "repository": "git@github.com:timbroddin/react-global-state.git",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+  },
+  "devDependencies": {
+  
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {}
+}
