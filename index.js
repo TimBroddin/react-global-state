@@ -29,28 +29,26 @@ const globState = new state();
 
 const gs = (Component) => {
 	  return class GlobalState extends React.Component {
-		  constructor(props) {
-			  super(props);
-			  this.state = {
-				  state: {}
-			  }
-		  }
+		constructor(props) {
+			super(props);
+			this.state = {
+				state: {}
+			}
+		}
 
-		  componentDidMount() {
-			  this.subsHandle = globState.subscribe(this.handleChange.bind(this));
-			  console.log(this.subsHandle);
-		  }
+		componentDidMount() {
+			this.subsHandle = globState.subscribe(this.handleChange.bind(this));
+		}
 
-		  componentWillUnmount() {
-			  globState.unsubscribe(this.subsHandle);
-		  }
+		componentWillUnmount() {
+			globState.unsubscribe(this.subsHandle);
+		}
 
-		  handleChange() {
-			  console.log(this.subsHandle);
-			  this.setState({ state: globState.state });
-		  }
+		handleChange() {
+			this.setState({ state: globState.state });
+		}
 
-    	render() {
+		render() {
       		return <Component {...this.props} state={this.state.state} setState={globState.setState.bind(globState)} />
     	}
   }
