@@ -1,6 +1,6 @@
 {
   "name": "react-global-state",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "git@github.com:timbroddin/react-global-state.git",
   "license": "MIT",
   "main": "index.js",
