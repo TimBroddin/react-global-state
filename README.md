@@ -24,14 +24,14 @@ Wrap your components with `gs`. Your global state will be available as the `stat
     
         render() {
             const {state} = this.props;
-            return <div onClick={this.onClick.bind(this)}>Klik mij</div>
+            return <div onClick={this.onClick.bind(this)}>Click me</div>
         }
     }
     
     class Display extends Component {
         render() {
             const {state} = this.props;
-            return <div>Counter waarde: {state.counter}</div>
+            return <div>Counter value: {state.counter}</div>
         }
     }
     
